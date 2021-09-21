@@ -10,7 +10,7 @@
 import os, sys
 
 # Locate the master key
-key_file = '/data/tycho/0/leroy.42/reduction/vla/lglbs_pipeline_configs/lglbs_keys/master_key.txt'
+key_file = '/data/tycho/0/leroy.42/reduction/vla/lglbs_pipeline_configs/lglbs_keys/diagnostic_master_key.txt'
 
 # Set directory for the pipeline and change to this directory
 pipedir = '/data/tycho/0/leroy.42/reduction/alma/phangs_imaging_scripts/'
@@ -55,18 +55,18 @@ this_kh.make_missing_directories(imaging=True,derived=True,postprocess=True,rele
 # Set up what we do this run
 ##############################################################################
 
-this_uvh.set_targets(only=['ic10','wlm','ngc6822'])
-#this_uvh.set_interf_configs(only=['D','C','C+D'])
-this_uvh.set_interf_configs(only=['C+D'])
+this_uvh.set_targets(only=['ngc6822'])
+#this_uvh.set_interf_configs(only=['C+D','C','D'])
+this_uvh.set_interf_configs(only=['C'])
 this_uvh.set_line_products(only=['hi21cm'])
 this_uvh.set_no_cont_products(True)
 
-this_imh.set_targets(only=['wlm'])
-this_imh.set_interf_configs(only=['C+D'])
+this_imh.set_targets(only=['ngc6822'])
+this_imh.set_interf_configs(only=['C'])
 this_imh.set_no_cont_products(True)
 this_imh.set_line_products(only=['hi21cm'])
 
-this_pph.set_targets(only=['ngc6822','wlm','ic10'])
+this_pph.set_targets(only=['ngc6822'])
 this_pph.set_interf_configs()
 this_pph.set_feather_configs()
 
@@ -95,9 +95,10 @@ if do_staging:
                                do_extract_line=False, do_extract_cont=True,
                                do_remove_staging=False, overwrite=True, strict_config=False)
     
-    this_uvh.loop_stage_uvdata(do_copy=False, do_contsub=False, 
-                               do_extract_line=False, do_extract_cont=False,
-                               do_remove_staging=True, overwrite=True, strict_config=False)
+    # Turned off for diagnostics
+    #this_uvh.loop_stage_uvdata(do_copy=False, do_contsub=False, 
+    #                           do_extract_line=False, do_extract_cont=False,
+    #                           do_remove_staging=True, overwrite=True, strict_config=False)
     
 ##############################################################################
 # Step through imaging
@@ -108,9 +109,9 @@ if do_staging:
 
 if do_imaging:
 
-    #this_imh.loop_imaging(do_all = False, do_dirty=True)
+    this_imh.loop_imaging(do_all = False, do_dirty_image=True)
     #this_imh.loop_imaging(do_all = False, do_dirty_image=True)
-    this_imh.loop_imaging(do_all = True)
+    #this_imh.loop_imaging(do_all = True)
 
 ##############################################################################
 # Step through postprocessing
