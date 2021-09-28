@@ -56,7 +56,7 @@ this_kh.make_missing_directories(imaging=True,derived=True,postprocess=True,rele
 ##############################################################################
 
 #this_pph.set_targets(only=['ngc6822','wlm','ic10'])
-this_pph.set_targets(only=['ic10'])
+this_pph.set_targets(only=['wlm'])
 this_pph.set_interf_configs(only=['C+D'])
 this_pph.set_line_products(only=['hi21cm'])
 this_pph.set_feather_configs()

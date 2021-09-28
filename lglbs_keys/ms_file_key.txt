@@ -1,0 +1,110 @@
+##########################################################################
+# MEASUREMENT SET FILE/INPUT KEY
+##########################################################################
+
+# Key to define files of input visibility data.
+
+# The pipeline begins with calibrated visibility data, which are
+# defined in this file. In this key, each measurement set (column 4)
+# is mapped to an individual target, project, array tag, and numerical
+# tag ('multiobs' suffix).
+ 
+# The syntax for the key is space or tab delimited:
+ 
+# Column 1: target name
+# Column 2: project tag
+# Column 3: science field name ("all" is fine)
+# Column 4: array tag (7m, C, etc.)
+# Column 5: observation number
+# Column 6: file with path relative to an ms_root
+
+# The paths are relative to ANY ms_root directory defined in the
+# master key.
+
+# The targets need to map to the target definitions, and the array
+# tags need to mesh with the config definitions.
+
+# The project tag should probably be the VLA or ALMA project code or
+# something similar.
+ 
+# PHANGS-ALMA examples:
+
+#circinus_1     2018.1.01321 	all  7m	  1	2018.1.01321.S/science_goal.uid___A001_X133d_X3c35/group.uid___A001_X133d_X3c36/member.uid___A001_X133d_X3c37/calibrated/uid___A002_Xd845af_Xa5a9.ms
+
+#circinus_2     2018.1.01321	all  7m	  2	2018.1.01321.S/science_goal.uid___A001_X133d_X3c2f/group.uid___A001_X133d_X3c30/member.uid___A001_X133d_X3c31/calibrated/uid___A002_Xd845af_Xab60.ms
+
+#
+##########################################################################
+
+# ---------------------------
+# NGC 6822
+# ---------------------------
+
+ngc6822	       13A-213	    	all  DnC  1	ngc6822/13A-213.sb20683830.eb21918128.56427.38029568287.speclines.ms
+ngc6822	       14B-212	    	all  DnC  2	ngc6822/14B-212.sb29620648.eb29691116.56919.106787094905.speclines.ms
+ngc6822	       14B-212	    	all  DnC  3	ngc6822/14B-212.sb29620648.eb29693656.56920.00741608796.speclines.ms
+ngc6822	       14B-212	    	all  DnC  4	ngc6822/14B-212.sb29620648.eb29693709.56920.09367974537.speclines.ms
+ngc6822	       14B-212	    	all  DnC  5	ngc6822/14B-212.sb29620648.eb29694276.56921.014874699074.speclines.ms
+ngc6822	       14B-212	    	all  DnC  6	ngc6822/14B-212.sb29620648.eb29694336.56921.09807260417.speclines.ms
+ngc6822	       14B-212	    	all  DnC  7	ngc6822/14B-212.sb29620648.eb29694462.56922.061477083334.speclines.ms
+
+ngc6822	       20A-346	    	all  D    1	ngc6822/20A-346.sb39502056.eb39566591.59314.458106377315.speclines.ms
+ngc6822	       20A-346	    	all  D    2	ngc6822/20A-346.sb39502056.eb39566749.59315.411083032406.speclines.ms
+
+ngc6822	       20A-346	    	all  C    1	ngc6822/20A-346.sb39776531.eb39924873.59378.221215682875.speclines.ms
+# This track needs to be re-QAed
+# ngc6822	       20A-346	    	all  C    2	ngc6822/20A-346.sb39776531.eb39926081.59379.25494028935.speclines.ms
+ngc6822	       20A-346	    	all  C    3	ngc6822/20A-346.sb39776531.eb39946054.59383.28007626157.speclines.ms
+ngc6822	       20A-346	    	all  C    4	ngc6822/20A-346.sb39776531.eb39953744.59384.200554780095.speclines.ms
+
+# BnC still TBD
+
+# ---------------------------
+# IC 10
+# ---------------------------
+
+ic10	       20A-346		all  D	  1	ic10/20A-346.sb39502198.eb39566766.59315.8146434838.speclines.ms
+ic10	       20A-346		all  D	  2	ic10/20A-346.sb39502198.eb39591025.59329.73447898148.speclines.ms
+ic10	       20A-346		all  D	  3	ic10/20A-346.sb39502198.eb39580042.59320.762951006946.speclines.ms
+ic10	       20A-346		all  D	  4	ic10/20A-346.sb39502198.eb39586719.59324.752905092595.speclines.ms
+ic10	       20A-346		all  D	  5	ic10/20A-346.sb39707823.eb39742380.59365.68438331019.speclines.ms   
+ic10	       20A-346		all  D	  6	ic10/20A-346.sb39502535.eb39651742.59350.52247524305.speclines.ms   
+
+ic10	       20A-346		all  C	  1	ic10/20A-346.sb39776368.eb39947892.59383.64103518518.speclines.ms
+ic10	       20A-346		all  C	  2	ic10/20A-346.sb39777503.eb39990584.59405.5530958912.speclines.ms
+ic10	       20A-346		all  C	  3	ic10/20A-346.sb39777503.eb39992760.59408.52298516204.speclines.ms
+ic10	       20A-346		all  C	  4	ic10/20A-346.sb39777503.eb39990987.59406.52842777778.speclines.ms
+ic10	       20A-346		all  C	  5	ic10/20A-346.sb39777503.eb39989842.59404.56774734954.speclines.ms
+ic10	       20A-346		all  C	  6	ic10/20A-346.sb39776368.eb39969521.59390.5763140162.speclines.ms
+ic10	       20A-346		all  C	  7	ic10/20A-346.sb39776368.eb39953810.59385.658740370374.speclines.ms
+ic10	       20A-346		all  C	  8	ic10/20A-346.sb39775943.eb39974954.59391.49974324074.speclines.ms   
+ic10	       20A-346		all  C	  9	ic10/20A-346.sb39776368.eb39953750.59384.61018394676.speclines.ms
+ic10	       20A-346		all  C	  10	ic10/20A-346.sb39775943.eb39955488.59386.428128784726.speclines.ms  
+ic10	       20A-346		all  C	  11	ic10/20A-346.sb39776368.eb39925848.59378.606368761575.speclines.ms
+
+# ---------------------------
+# WLM
+# ---------------------------
+
+wlm            20A-346		all  D    1	wlm/20A-346.sb39599872.eb39646235.59348.47388637732.speclines.ms
+wlm	       20A-346		all  D    2	wlm/20A-346.sb39599872.eb39635333.59345.482919988426.speclines.ms
+
+wlm	       20A-346		all  C    1	wlm/20A-346.sb39778123.eb39981761.59394.40503913195.speclines.ms
+wlm	       20A-346		all  C    2	wlm/20A-346.sb39778123.eb39978451.59393.35237508102.speclines.ms
+wlm	       20A-346		all  C    3	wlm/20A-346.sb39778123.eb39975755.59392.43283763889.speclines.ms
+wlm	       20A-346		all  C    4	wlm/20A-346.sb39777869.eb39994041.59410.31868813657.speclines.ms   
+wlm	       20A-346		all  C    5	wlm/20A-346.sb39777869.eb39992361.59407.36481010416.speclines.ms   
+wlm	       20A-346		all  C    6	wlm/20A-346.sb39778123.eb39966575.59389.371327037035.speclines.ms
+wlm	       20A-346		all  C    7	wlm/20A-346.sb39777869.eb39990985.59406.31476274306.speclines.ms
+wlm	       20A-346		all  C    8	wlm/20A-346.sb39778123.eb39982654.59395.345657199076.speclines.ms
+
+# ---------------------------
+# IC 1613
+# ---------------------------
+
+# no D yet
+
+ic1613         20A-346		all  C    1	ic1613/20A-346.sb39983867.eb39996094.59414.3795046875.speclines.ms
+ic1613         20A-346		all  C    2	ic1613/20A-346.sb39983867.eb40000784.59416.3061708912.speclines.ms
+
+

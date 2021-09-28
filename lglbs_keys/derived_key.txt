@@ -1,0 +1,53 @@
+##########################################################################
+# DERIVED PRODUCT DEFINITION KEY
+##########################################################################
+
+# This key defines the final science products derived by the pipeline.
+
+# Column 1: configuration name (e.g., 12m+7m, 7m+tp, etc.)
+# "all" is an acceptable wildcard.
+
+# Column 2: spectral product name
+# "all" is an acceptable wildcard.
+
+# Column 3: field being defined
+
+# Column 4: values
+
+# FIELDS
+
+# phys_res - target physical resolutions in parsecs. Format is a a set
+# of 'tag':value pairs in which the value is the parsec target and the
+# tag is the tag to insert into filenames.
+
+# ang_res - target angular resolutions in arcseconds. Format is a a
+# set of 'tag':value pairs in which the value is the arcsecond target
+# and the tag is the tag to insert into filenames.
+
+# mask_configs - the names of other configurations to check for
+# masks. Masks from these configurations will be used as part of the
+# hybrid masking step of the pipeline.
+
+# moments - list of moments (defined in the moment key) to calculate
+# for that config.
+
+##########################################################################
+
+all		all	convolve_kw	{}
+
+all		all	noise_kw	{'spec_box':5,'iterations':3}
+
+all		all	strictmask_kw	{'hi_thresh':4.0,'hi_nchan':2,'lo_thresh':2.0,'lo_nchan':2}
+all		all	strictmask_kw	{'grow_xy':0,'grow_v':0}
+all		all	strictmask_kw	{'min_pix':None,'min_area':None}
+
+all		all	broadmask_kw	{}
+
+all		all	phys_res	{'150pc':150.0,'500pc':150.0,'1000pc':1000.0,}
+all		all	ang_res		{'60as':60.0,'120as':120.0}
+
+all		all	mask_configs	['D','D+TP']
+
+all		all	moments		['strictmom0','strictmom1','strictmom2','strictew']
+all		all	moments		['broadmom0','broadtpeak','broadtpeak12p5','broadmom1']
+all		all	moments		['mom1wprior']
