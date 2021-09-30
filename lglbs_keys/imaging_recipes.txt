@@ -41,3 +41,4 @@
 # DELETE AFTER HERE FOR NEW PROJECT, FULL PHANGS-ALMA CASE FOLLOWS
 
 all      hi21cm        all           cube_mosaic.clean
+all      hilores       all           cube_mosaic.clean

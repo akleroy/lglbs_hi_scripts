@@ -56,15 +56,14 @@ this_kh.make_missing_directories(imaging=True,derived=True,postprocess=True,rele
 ##############################################################################
 
 this_uvh.set_targets(only=['ic10','wlm','ngc6822'])
-#this_uvh.set_interf_configs(only=['D','C','C+D'])
-this_uvh.set_interf_configs(only=['C+D'])
-this_uvh.set_line_products(only=['hi21cm'])
+this_uvh.set_interf_configs(only=['D','C','C+D'])
+this_uvh.set_line_products(only=['hi21cm','hilores'])
 this_uvh.set_no_cont_products(True)
 
-this_imh.set_targets(only=['wlm'])
+this_imh.set_targets(only=['ic10','wlm','ngc6822'])
 this_imh.set_interf_configs(only=['C+D'])
 this_imh.set_no_cont_products(True)
-this_imh.set_line_products(only=['hi21cm'])
+this_imh.set_line_products(only=['hilores'])
 
 this_pph.set_targets(only=['ngc6822','wlm','ic10'])
 this_pph.set_interf_configs()
