@@ -64,9 +64,8 @@ ngc6822	       14B-212	    	all  CnB  3	ngc6822/14B-212.sb30132182.eb30190975.57
 ngc6822	       14B-212	    	all  CnB  4	ngc6822/14B-212.sb30132551.eb30194761.57046.72533179398.speclines.ms.split
 ngc6822	       14B-212	    	all  CnB  5	ngc6822/14B-212.sb30132841.eb30197548.57048.585723807875.speclines.ms.split
 
-# These two CnB 14B-212 tracks are quite short, should they be used?
+# This CnB 14B-212 track is quite short, should it be used?
 ngc6822	       14B-212		all  CnB  6	ngc6822/14B-212.sb30131859.eb30166617.57039.78029609953.speclines.ms.split
-
 
 ngc6822	       14B-212		all  B	  1	ngc6822/14B-212.sb30069612.eb30206777.57049.59300603009.speclines.ms.split
 ngc6822	       14B-212		all  B	  2	ngc6822/14B-212.sb30132087.eb30241057.57053.58923415509.speclines.ms.split
@@ -85,8 +84,6 @@ ngc6822	       20A-346		all  B	  13	ngc6822/20A-346.sb40198636.eb40836032.59506.
 ngc6822	       20A-346		all  B	  14	ngc6822/20A-346.sb40198636.eb40863628.59507.962669016204.speclines.ms.split
 
 # A
-
-
 
 # ---------------------------
 # IC 10 (all fields)
@@ -208,7 +205,7 @@ ic1613	       20A-346		all  C	  4	ic1613/20A-346.sb39983867.eb40024999.59433.251
 # 9375
 # 8985
 # 4074
-$ 8102
+# 8102
 
 # Have only the central field
 ic1613	       13A-213		all  C	  5	ic1613/13A-213.sb23938537.eb24172212.56503.318132465276.speclines.ms  

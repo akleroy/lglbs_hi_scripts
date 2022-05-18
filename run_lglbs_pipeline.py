@@ -8,20 +8,21 @@
 ##############################################################################
 
 import os, sys
+from importlib import reload
 
 # Locate the master key
 key_file = '/data/tycho/0/leroy.42/reduction/vla/lglbs_pipeline_configs/lglbs_keys/master_key.txt'
 
 # Set directory for the pipeline and change to this directory
-pipedir = '/data/tycho/0/leroy.42/reduction/alma/phangs_imaging_scripts/'
-os.chdir(pipedir)
+#pipedir = '/data/tycho/0/leroy.42/reduction/alma/phangs_imaging_scripts/'
+#os.chdir(pipedir)
 
 # Make sure we are inside CASA (modify this to use the command line version)
-sys.path.append(os.getcwd())
-casa_enabled = (sys.argv[0].endswith('start_casa.py'))
-if not casa_enabled:
-    print('Please run this script inside CASA!')
-    sys.exit()
+#sys.path.append(os.getcwd())
+#casa_enabled = (sys.argv[0].endswith('start_casa.py'))
+#if not casa_enabled:
+#    print('Please run this script inside CASA!')
+#    sys.exit()
 
 # Set the logging
 from phangsPipeline import phangsLogger as pl
@@ -55,25 +56,24 @@ this_kh.make_missing_directories(imaging=True,derived=True,postprocess=True,rele
 # Set up what we do this run
 ##############################################################################
 
-this_uvh.set_targets(only=['ic1613'])
-this_uvh.set_interf_configs(only=['C'])
+this_uvh.set_targets(only=['ic10ctr','ngc6822','wlmctr'])
+this_uvh.set_interf_configs()
 this_uvh.set_line_products(only=['hi21cm','hilores'])
 this_uvh.set_no_cont_products(True)
 
-# need hi21cm for 6822 and ic1613 too
-this_imh.set_targets(only=['ic1613','ngc6822']) #'ic1613',
-this_imh.set_interf_configs(only=['C','C+D'])
+this_imh.set_targets()
+this_imh.set_interf_configs()
 this_imh.set_no_cont_products(True)
-this_imh.set_line_products(only=['hi21cm'])
+this_imh.set_line_products(only=['hi21cm','hilores'])
 
-this_pph.set_targets(only=['ngc6822','wlm','ic10'])
+this_pph.set_targets()
 this_pph.set_interf_configs()
 this_pph.set_feather_configs()
 
 # Switches for what steps to run
 
-do_staging = False
-do_imaging = True
+do_staging = True
+do_imaging = False
 do_postprocess = False
 do_stats = False
 

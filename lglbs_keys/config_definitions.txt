@@ -168,19 +168,36 @@ line_product    hilores    {'line_tag':'hi21cm','channel_kms':4.2,'statwt_edge_k
 line_product    hilores    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm']}
 
 interf_config   D         {'array_tags':['D','DnC']}
-interf_config   C         {'array_tags':['C','BnC']}
-interf_config   C+D       {'array_tags':['D','DnC','C','BnC']}
+interf_config   C         {'array_tags':['C','BnC','CnB']}
+interf_config   C+D       {'array_tags':['D','DnC','C','CnB']}
+interf_config	B	  {'array_tags':['B','BnA']}
+interf_config   B+C+D     {'array_tags':['D','DnC','C','CnB','B','BnA']}
+interf_config	A	  {'array_tags':['A']}
+interf_config   A+B+C+D   {'array_tags':['D','DnC','C','CnB','B','BnA','A']}
 
 # note used 1000 earlier but will just go out to 300 moving forward
+
 interf_config   D         {'clean_scales_arcsec':[0,30,100,300]}
 interf_config   C         {'clean_scales_arcsec':[0,10,30,100,300]}
+interf_config   B         {'clean_scales_arcsec':[0,5,10,30,100,300]}
+interf_config   A         {'clean_scales_arcsec':[0,3,6,10,30,100,300]}
 interf_config   C+D       {'clean_scales_arcsec':[0,10,30,100,300]}
+interf_config   B+C+D     {'clean_scales_arcsec':[0,5,10,30,100,300]}
+interf_config   A+B+C+D   {'clean_scales_arcsec':[0,3,6,10,30,100,300]}
 
 # Will add D, B, A, D+C, D+C+B, etc.
 
-feather_config  D+TP      {'interf_config':'D'}
+feather_config  D+TP        {'interf_config':'D'}
 feather_config  C+D+TP      {'interf_config':'C+D'}
+feather_config  B+C+D+TP    {'interf_config':'B+C+D'}
+feather_config  A+B+C+D+TP  {'interf_config':'A+B+C+D'}
+
+# Could modify these
 
 array_tag	D	   {'timebin':'20s'}
 array_tag	DnC	   {'timebin':'20s'}
 array_tag	C	   {'timebin':'10s'}
+array_tag	CnB	   {'timebin':'10s'}
+array_tag	B	   {'timebin':'5s'}
+array_tag	BnA	   {'timebin':'5s'}
+array_tag	A	   {'timebin':'5s'}
