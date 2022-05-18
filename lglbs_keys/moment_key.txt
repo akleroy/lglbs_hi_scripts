@@ -118,5 +118,5 @@ mom1wprior 	round 		2
 mom1wprior 	ext 		_mom1wprior
 mom1wprior 	ext_error 	_emom1wprior
 mom1wprior	maps_to_pass	['strict_mom1','strict_emom1','broad_mom1','broad_emom1','broad_mom0','broad_emom0']
-mom1wprior 	other_exts 	{'vfield_prior':'_7m+tp_co21_15as_strict_mom1.fits'}
+mom1wprior 	other_exts 	{'vfield_prior':'_C+D_hilores_60as_strict_mom1.fits'}
 mom1wprior	kwargs 		{'vfield_reject_thresh':'20km/s','mom0_thresh':2.0}
