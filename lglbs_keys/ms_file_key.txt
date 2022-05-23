@@ -178,8 +178,8 @@ wlmctr         20A-346		WLM_1_CTR  D    1	wlm/20A-346.sb39599872.eb39646235.5934
 wlmctr	       20A-346		WLM_1_CTR  D    2	wlm/20A-346.sb39599872.eb39635333.59345.482919988426.speclines.ms
 
 # the DnC fields have only the center
-wlmctr	       20A-346 	        WLM	   DnC  1	wlm/13A-213.sb20493306.eb21732269.56426.55943959491.speclines.ms.split
-wlmctr	       20A-346 	        WLM   	   DnC  2	wlm/13A-213.sb20493306.eb23015836.56439.524362592594.speclines.ms.split
+wlmctr	       20A-346 	        all	   DnC  1	wlm/13A-213.sb20493306.eb21732269.56426.55943959491.speclines.ms.split
+wlmctr	       20A-346 	        all   	   DnC  2	wlm/13A-213.sb20493306.eb23015836.56439.524362592594.speclines.ms.split
 
 wlmctr	       20A-346		WLM_1_CTR  C    1	wlm/20A-346.sb39778123.eb39981761.59394.40503913195.speclines.ms
 wlmctr	       20A-346		WLM_1_CTR  C    2	wlm/20A-346.sb39778123.eb39978451.59393.35237508102.speclines.ms
