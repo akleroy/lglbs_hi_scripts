@@ -57,6 +57,7 @@ this_kh.make_missing_directories(imaging=True,derived=True,postprocess=True,rele
 ##############################################################################
 
 this_uvh.set_targets(only=['ic10ctr','ic1613ctr','ngc6822','wlmctr'])
+#this_uvh.set_targets(only=['wlmctr'])
 this_uvh.set_interf_configs(only=['B+C+D'])
 this_uvh.set_line_products(only=['hi21cm','hilores'])
 this_uvh.set_no_cont_products(True)
@@ -83,17 +84,19 @@ do_stats = False
 
 if do_staging:
 
-    this_uvh.loop_stage_uvdata(do_copy=True, do_contsub=True, 
-                               do_extract_line=False, do_extract_cont=False,
-                               do_remove_staging=False, overwrite=True, strict_config=False)
+    #this_uvh.loop_stage_uvdata(do_copy=True, do_contsub=True, 
+    #                           do_extract_line=False, do_extract_cont=False,
+    #                           do_remove_staging=False, overwrite=True, strict_config=False)
     
     this_uvh.loop_stage_uvdata(do_copy=False, do_contsub=False, 
                                do_extract_line=True, do_extract_cont=False,
                                do_remove_staging=False, overwrite=True, strict_config=False)
+
+    # Probably leave this commented out for this application
     
-    this_uvh.loop_stage_uvdata(do_copy=False, do_contsub=False, 
-                               do_extract_line=False, do_extract_cont=True,
-                               do_remove_staging=False, overwrite=True, strict_config=False)
+    #this_uvh.loop_stage_uvdata(do_copy=False, do_contsub=False, 
+    #                           do_extract_line=False, do_extract_cont=True,
+    #                           do_remove_staging=False, overwrite=True, strict_config=False)
     
     this_uvh.loop_stage_uvdata(do_copy=False, do_contsub=False, 
                                do_extract_line=False, do_extract_cont=False,
