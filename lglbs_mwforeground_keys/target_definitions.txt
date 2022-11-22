@@ -33,35 +33,21 @@
 
 ##########################################################################
 
-ic10		00h20m17.34s  +59d18m13.6s	-340	210
-ic10ctr		00h20m17.34s  +59d18m13.6s	-340	210
+# ic10		00h20m17.34s  +59d18m13.6s	-340	210
+# ic10ctr		00h20m17.34s  +59d18m13.6s	-340	210
 
-ic1613		01h04m47.79s  +02d07m04.0s	-238	210
-ic1613ctr	01h04m47.79s  +02d07m04.0s	-238	210
+# ic1613		01h04m47.79s  +02d07m04.0s	-238	210
+# ic1613ctr	01h04m47.79s  +02d07m04.0s	-238	210
 
-m31		00h42m44.35s  +41d16m08.6s	-296	700
+# wlm		00h01m58.16s  -15d27m39.34s	-125	210
+# wlmctr		00h01m58.16s  -15d27m39.34s	-125	210
 
-m33		01h33m50.89s  +30d39m36.8s	-180	500
+# Foregrounds!
+ic10-mwfore		00h20m17.34s  +59d18m13.6s	0	80
+ic10ctr-mwfore		00h20m17.34s  +59d18m13.6s	0	80
 
-ngc6822		19h44m57.74s  -14d48m12.4s	-44	210
+ic1613-mwfore		01h04m47.79s  +02d07m04.0s	0	80
+ic1613ctr-mwfore	01h04m47.79s  +02d07m04.0s	0	80
 
-wlm		00h01m58.16s  -15d27m39.34s	-125	210
-wlmctr		00h01m58.16s  -15d27m39.34s	-125	210
-
-# Foregrounds! These need to be defined elsewhere: ms_file_key copy with the foreground name.
-# ic10_fore		00h20m17.34s  +59d18m13.6s	0	80
-# ic10ctr_fore		00h20m17.34s  +59d18m13.6s	0	80
-# ic1613_fore		01h04m47.79s  +02d07m04.0s	0	80
-# ic1613ctr_fore	01h04m47.79s  +02d07m04.0s	0	80
-
-# No M31 foreground as it overlaps with HI in M31
-# m31		00h42m44.35s  +41d16m08.6s	-296	700
-
-# No M33 foreground as it overlaps (kinda) with HI in M33
-# m33		01h33m50.89s  +30d39m36.8s	-180	500
-
-# No 6822 foreground as it overlaps with HI in 6822
-# ngc6822		19h44m57.74s  -14d48m12.4s	-44	210
-
-# wlm_fore		00h01m58.16s  -15d27m39.34s	0	80
-# wlmctr_fore		00h01m58.16s  -15d27m39.34s	0	80
+wlm-mwfore		00h01m58.16s  -15d27m39.34s	0	80
+wlmctr-mwfore		00h01m58.16s  -15d27m39.34s	0	80
