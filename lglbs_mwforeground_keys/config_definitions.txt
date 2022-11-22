@@ -164,26 +164,39 @@
 # NOTE: we need to be flagging the Galactic 21-cm for the continuum subtraction!
 # exclude_freqrange flags out -80 to 80 km/s in HI
 
-line_product    hi21cm    {'line_tag':'hi21cm','channel_kms':0.42,'statwt_edge_kms':50.0}
-line_product    hi21cm    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42002671,1.42078479]]}
+# WHAT'S GOING ON HERE:
+# The HI freqs of the background targets are hard-wired to ignore for the uvcontsub
+# This is why each target has its own line definition
 
-line_product    hilores    {'line_tag':'hi21cm','channel_kms':4.2,'statwt_edge_kms':50.0}
-line_product    hilores    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42002671,1.42078479]]}
+line_product    hi21cm_ic10    {'line_tag':'hi21cm','channel_kms':0.42,'statwt_edge_kms':50.0}
+line_product    hi21cm_ic10    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.421519172,1.422514144]]}
 
-line_product    himidres    {'line_tag':'hi21cm','channel_kms':2.1,'statwt_edge_kms':50.0}
-line_product    himidres    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42002671,1.42078479]]}
+line_product    hilores_ic10    {'line_tag':'hi21cm','channel_kms':4.2,'statwt_edge_kms':50.0}
+line_product    hilores_ic10    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.421519172,1.422514144]]}
 
-line_product    oh1665    {'line_tag':'oh1665','channel_kms':1.5,'statwt_edge_kms':50.0}
-line_product	oh1665	  {'fitorder':0,'combinespw':False,'lines_to_flag':['oh1665','oh1667']}
+line_product    himidres_ic10    {'line_tag':'hi21cm','channel_kms':2.1,'statwt_edge_kms':50.0}
+line_product    himidres_ic10    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.421519172,1.422514144]]}
 
-line_product    oh1667    {'line_tag':'oh1667','channel_kms':1.5,'statwt_edge_kms':50.0}
-line_product    oh1667    {'fitorder':0,'combinespw':False,'lines_to_flag':['oh1665','oh1667']}
 
-line_product    oh1612    {'line_tag':'oh1612','channel_kms':1.5,'statwt_edge_kms':50.0}
-line_product    oh1612    {'fitorder':0,'combinespw':False,'lines_to_flag':['oh1612']}
+line_product    hi21cm_ic1613    {'line_tag':'hi21cm','channel_kms':0.42,'statwt_edge_kms':50.0}
+line_product    hi21cm_ic1613    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42103590,1.422030875]]}
 
-line_product    oh1720    {'line_tag':'oh1720','channel_kms':1.5,'statwt_edge_kms':50.0}
-line_product    oh1720    {'fitorder':0,'combinespw':False,'lines_to_flag':['oh1720']}
+line_product    hilores_ic1613    {'line_tag':'hi21cm','channel_kms':4.2,'statwt_edge_kms':50.0}
+line_product    hilores_ic1613    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42103590,1.422030875]]}
+
+line_product    himidres_ic1613    {'line_tag':'hi21cm','channel_kms':2.1,'statwt_edge_kms':50.0}
+line_product    himidres_ic1613    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42103590,1.422030875]]}
+
+
+# The WLM window overlaps with the \pm80 km/s MW foreground. This range includes both.
+line_product    hi21cm_wlm    {'line_tag':'hi21cm','channel_kms':0.42,'statwt_edge_kms':50.0}
+line_product    hi21cm_wlm    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42002671,1.4214954]]}
+
+line_product    hilores_wlm    {'line_tag':'hi21cm','channel_kms':4.2,'statwt_edge_kms':50.0}
+line_product    hilores_wlm    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42002671,1.4214954]]}
+
+line_product    himidres_wlm    {'line_tag':'hi21cm','channel_kms':2.1,'statwt_edge_kms':50.0}
+line_product    himidres_wlm    {'fitorder':0,'combinespw':False,'lines_to_flag':['hi21cm'],'exclude_freq_ranges_ghz':[[1.42002671,1.4214954]]}
 
 
 interf_config   D         {'array_tags':['D','DnC']}
@@ -210,6 +223,7 @@ feather_config  D+TP        {'interf_config':'D'}
 feather_config  C+D+TP      {'interf_config':'C+D'}
 feather_config  B+C+D+TP    {'interf_config':'B+C+D'}
 feather_config  A+B+C+D+TP  {'interf_config':'A+B+C+D'}
+feather_config  A+B+C+TP  {'interf_config':'A+B+C+D'}
 
 # Could modify these
 

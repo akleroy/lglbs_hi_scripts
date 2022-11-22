@@ -199,7 +199,7 @@
 
 # Locations
 
-key_dir        	     	/home/erickoch/lglbs_hi_scripts/lglbs_keys/
+key_dir        	     	/home/erickoch/lglbs_hi_scripts/lglbs_mwforeground_keys/
 cleanmask_root	/reduction10/erickoch/LGLBS/line_imaging/cleanmasks/
 imaging_root 	/reduction10/erickoch/LGLBS/line_imaging/imaging/
 postprocess_root /reduction10/erickoch/LGLBS/line_imaging/postprocess/
