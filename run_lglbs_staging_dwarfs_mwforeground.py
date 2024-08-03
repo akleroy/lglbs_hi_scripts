@@ -93,11 +93,13 @@ else:
 print(this_targ)
 
 this_uvh.set_targets(only=[this_targ])
+print(this_uvh.get_targets())
 
 # Because we have hand-tuned the freq range to exclude per galaxy (so uvcontsub ignores
 # both the MW and galaxy), the line products are keyed per target:
 this_gal = this_targ.split("-mwfore")[0]
 all_line_products = [f'hi21cm_{this_gal}',
+                     f'hi21cm_1p2kms_{this_gal}',
                      f'hilores_{this_gal}',
                      f'himidres_{this_gal}']
 this_uvh.set_line_products(only=all_line_products)

@@ -78,10 +78,16 @@ if not this_targ in all_targs:
 
 #this_uvh.set_targets(only=['ic10ctr','ic1613ctr','ngc6822','wlmctr'])
 this_imh.set_targets(only=[this_targ])
-this_imh.set_interf_configs(only=['C+D', 'C', 'D'])
 
-all_line_products = ['oh1612', 'oh1665', 'oh1667', 'oh1720',
-                     'hi21cm', 'hilores', 'himidres']
+# For testing, just check the individual configs to check for problems in the
+# staging steps.
+# this_imh.set_interf_configs(only=['C+D', 'C', 'D'])
+this_imh.set_interf_configs(only=['D'])
+
+# Same as above: for testing start with the low res HI only
+# all_line_products = ['oh1612', 'oh1665', 'oh1667', 'oh1720',
+#                      'hi21cm', 'hilores', 'himidres']
+all_line_products = ['hilores','oh1612', 'oh1665', 'oh1667', 'oh1720', 'himidres']
 this_imh.set_line_products(only=all_line_products)
 
 this_imh.set_no_cont_products(True)
