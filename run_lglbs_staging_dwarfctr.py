@@ -78,10 +78,11 @@ if not this_targ in all_targs:
 
 #this_uvh.set_targets(only=['ic10ctr','ic1613ctr','ngc6822','wlmctr'])
 this_uvh.set_targets(only=[this_targ])
-this_uvh.set_interf_configs(only=['A', 'B', 'C', 'D', 'B+C+D', 'A+B+C+D', 'A+B+C'])
+this_uvh.set_interf_configs(only=['A', 'B', 'B+C+D', 'A+B+C+D', 'A+B+C'])
 
-all_line_products = ['hi21cm_1p2kms', 'hi21cm', 'hilores', 'himidres',
-                     'oh1612', 'oh1665', 'oh1667', 'oh1720',]
+all_line_products = ['oh1612', 'oh1665', 'oh1667', 'oh1720',
+                      'hi21cm', 'hi21cm_1p2kms', 'hilores', 'himidres']
+this_uvh.set_line_products(only=all_line_products)
 
 # this_uvh.set_line_products(only=['hilores'])
 

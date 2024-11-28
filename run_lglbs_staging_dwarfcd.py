@@ -27,11 +27,8 @@ from importlib import reload
 #key_file = '/data/tycho/0/leroy.42/reduction/vla/lglbs_pipeline_configs/lglbs_keys/master_key.txt'
 key_file = "/home/erickoch/lglbs_hi_scripts/lglbs_keys/master_key.txt"
 
-<<<<<<< HEAD
 data_path = "/reduction10/erickoch/LGLBS/line_imaging/"
 export_path = f"{data_path}/staged_measurement_sets/"
-=======
->>>>>>> b463637a7987aecf88f419193ac21cdbbcbd9ea7
 
 # Set directory for the pipeline and change to this directory
 #pipedir = '/data/tycho/0/leroy.42/reduction/alma/phangs_imaging_scripts/'
