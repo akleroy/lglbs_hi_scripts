@@ -2,5 +2,6 @@
 *~
 *.log
 *.code-workspace
-*.DS_store
+*.DS_Store
 *ipynb_checkpoints
+figures
