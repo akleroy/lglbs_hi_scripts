@@ -25,7 +25,11 @@ galaxy_dict = {'ngc6822': ["NGC6822-center_cube_ircs_no_galactic_component.fits"
                #          0.96],
                # 'wlm': ['WLM_GBT.FITS',
                #         1.14],
+<<<<<<< HEAD
                # 'ic1613': ['IC1613_GBT_vegas_K_noresample_lsrk.fits', 
+=======
+               # 'ic1613': ['IC1613_GBT_vegas_K_noresample_lsrk.fits',
+>>>>>>> 24ab4b9 (Long overdue update, including foreground separation, feathering scripts, rms estimation, and cluster imaging)
                #            0.89],
                }
 
@@ -170,3 +174,30 @@ for this_key in hi_cube_name_keys:
         this_feathered_filename = vla_data_path / f"{this_vla_filename.name[:-5]}_feathered.K.fits"
 
         feathered_cube.write(this_feathered_filename, overwrite=True)
+<<<<<<< HEAD
+=======
+
+
+
+        # Divide by the PB.
+        pb_cube = SpectralCube.read(vla_data_path / this_vla_filename.name.replace(".fits", "_pb.fits"))
+
+        feathered_cube_pbcorr = feather_simple_cube / pb_cube
+        this_feathered_filename = vla_data_path / f"{this_vla_filename.name[:-5]}_feathered.K.fits"
+        feathered_cube_pbcorr.minimal_subcube().write(this_feathered_filename, overwrite=True)
+
+
+for this_linename in hi_cube_name_keys:
+
+    all_filenames = glob(f"*_{this_linename}_*feathered.K.fits")
+
+    for this_name in all_filenames:
+        print(this_name)
+        cube = SpectralCube.read(this_name); cube.allow_huge_operations = True
+        pb_cube = SpectralCube.read(this_name.replace("feathered.K.fits", "pb.fits")); pb_cube.allow_huge_operations = True
+        cube_pbcorr = (cube / pb_cube.unitless_filled_data[:]).minimal_subcube()
+        this_target, this_config = this_name.split("_")[:2]
+        name_stem = this_name.split("_feathered.K.fits")[0]
+        output_filename = f"../line_imaging/postprocess/{this_target}/{this_target}_{this_config}+tp_{this_linename}_pbcorr_trimmed_k.fits"
+        cube_pbcorr.write(output_filename, overwrite=True)
+>>>>>>> 24ab4b9 (Long overdue update, including foreground separation, feathering scripts, rms estimation, and cluster imaging)

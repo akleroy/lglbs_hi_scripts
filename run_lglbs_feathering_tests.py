@@ -166,13 +166,21 @@ for this_gal in galaxy_dict:
         (sd_data_path / f"{this_gal}_overlap_vla_samples.npy").unlink()
 
     np.save(sd_data_path / f"{this_gal}_overlap_vla_samples.npy",
+<<<<<<< HEAD
             spatial_offsets)
+=======
+            high_pts)
+>>>>>>> 24ab4b9 (Long overdue update, including foreground separation, feathering scripts, rms estimation, and cluster imaging)
 
     if (sd_data_path / f"{this_gal}_overlap_gbt_samples.npy").exists():
         (sd_data_path / f"{this_gal}_overlap_gbt_samples.npy").unlink()
 
     np.save(sd_data_path / f"{this_gal}_overlap_gbt_samples.npy",
+<<<<<<< HEAD
             spatial_offsets)
+=======
+            low_pts)
+>>>>>>> 24ab4b9 (Long overdue update, including foreground separation, feathering scripts, rms estimation, and cluster imaging)
 
     sc_factor, sc_err = find_scale_factor(np.hstack(low_pts[:-1]),
                                         np.hstack(high_pts[:-1]),

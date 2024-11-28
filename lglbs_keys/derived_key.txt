@@ -43,12 +43,12 @@ all		all	strictmask_kw	{'min_pix':None,'min_area':None}
 
 all		all	broadmask_kw	{}
 
-all		all	phys_res	{'80pc':80.0,'120pc':120.0,'250pc':250.0,'500pc':500.0,}
-all		all	ang_res		{'30as':30.0,'60as':60.0}
+all		all	phys_res	{'80pc':80.0,'120pc':120.0}
+all		all	ang_res		{'30as':30.0}
 
 # Change this as more data come in
-all		all	mask_configs	['C','C+D']
+all		all	mask_configs	['C','C+D','C+D+tp']
 
 all		all	moments		['strictmom0','strictmom1','strictmom2','strictew']
-all		all	moments		['broadmom0','broadtpeak','broadtpeak12p5','broadmom1']
+all		all	moments		['broadmom0','broadtpeak','broadtpeak12p5']
 all		all	moments		['mom1wprior']

@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../phangs_imaging_scripts"
+		},
+		{
+			"path": "../phangs_vla"
 		}
 	],
 	"settings": {}

@@ -86,7 +86,7 @@ this_uvh.set_targets(only=[this_targ])
 this_uvh.set_interf_configs(only=all_configs)
 
 all_line_products = ['oh1612', 'oh1665', 'oh1667', 'oh1720',
-                     'hi21cm', 'hi21cm_1p2kms', 'hilores', 'himidres']
+                     'hi21cm', 'hi21cm_0p8kms', 'hilores', 'himidres']
 # all_line_products = ['hi21cm_1p2kms']
 
 this_uvh.set_line_products(only=all_line_products)
