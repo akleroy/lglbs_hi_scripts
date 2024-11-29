@@ -200,13 +200,13 @@
 # Locations
 
 key_dir        	     	/home/erickoch/lglbs_hi_scripts/lglbs_keys/
-cleanmask_root	/reduction10/erickoch/LGLBS/line_imaging/cleanmasks/
-imaging_root 	/reduction10/erickoch/LGLBS/line_imaging/imaging/
-postprocess_root /reduction10/erickoch/LGLBS/line_imaging/postprocess/
-derived_root   /reduction10/erickoch/LGLBS/line_imaging/derived/
-release_root		/reduction10/erickoch/LGLBS/line_imaging/release/
-ms_root			/reduction10/erickoch/LGLBS/line_imaging/MeasurementSets/
-singledish_root		/reduction10/erickoch/LGLBS/line_imaging/singledish/
+cleanmask_root	/reduction/erickoch/LGLBS/line_imaging/cleanmasks/
+imaging_root 	/reduction/erickoch/LGLBS/line_imaging/imaging/
+postprocess_root /reduction/erickoch/LGLBS/line_imaging/postprocess/
+derived_root   /reduction/erickoch/LGLBS/line_imaging/derived/
+release_root		/reduction/erickoch/LGLBS/line_imaging/release/
+ms_root			/reduction/erickoch/LGLBS/line_imaging/MeasurementSets/
+singledish_root		/reduction/erickoch/LGLBS/line_imaging/singledish/
 
 # Data files
 

@@ -43,11 +43,11 @@
 # wlmctr		00h01m58.16s  -15d27m39.34s	-125	210
 
 # Foregrounds!
-ic10-mwfore		00h20m17.34s  +59d18m13.6s	0	80
-ic10ctr-mwfore		00h20m17.34s  +59d18m13.6s	0	80
+ic10-mwfore		00h20m17.34s  +59d18m13.6s	0	160
+ic10ctr-mwfore		00h20m17.34s  +59d18m13.6s	0	160
 
-ic1613-mwfore		01h04m47.79s  +02d07m04.0s	0	80
-ic1613ctr-mwfore	01h04m47.79s  +02d07m04.0s	0	80
+ic1613-mwfore		01h04m47.79s  +02d07m04.0s	0	160
+ic1613ctr-mwfore	01h04m47.79s  +02d07m04.0s	0	160
 
-wlm-mwfore		00h01m58.16s  -15d27m39.34s	0	80
-wlmctr-mwfore		00h01m58.16s  -15d27m39.34s	0	80
+wlm-mwfore		00h01m58.16s  -15d27m39.34s	0	160
+wlmctr-mwfore		00h01m58.16s  -15d27m39.34s	0	160

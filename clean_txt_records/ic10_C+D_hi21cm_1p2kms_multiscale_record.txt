@@ -1,0 +1,15 @@
+loopnum, deconvolver, niter, cycleniter, threshold, noise, model_flux, frac_delta_flux
+# column 1: Loop number.
+# column 2: Deconvolver used in clean.
+# column 3: Allocated number of iterations.
+# column 4: Cycleniter used to force major cycles.
+# column 5: Threshold supplied to clean.
+# column 6: Noise level measured in residuals.
+# column 7: Integrated model flux.
+# column 8: Fractional change in flux from previous loop.
+0, multiscale, 2550, 100, 0.005077763565095331Jy/beam, 0.0012694408912738327Jy/beam, 114.60127979823757Jy*chan, inf
+1, multiscale, 5100, 200, 0.004868948857501649Jy/beam, 0.0012172372143754123Jy/beam, 162.13168958200774Jy*chan, 0.4147458899887532
+2, multiscale, 10200, 300, 0.004797663545805249Jy/beam, 0.0011994158864513122Jy/beam, 211.08764802490208Jy*chan, 0.3019518181122263
+3, multiscale, 20400, 400, 0.004700785278167008Jy/beam, 0.001175196319541752Jy/beam, 251.3595806032913Jy*chan, 0.19078298969742813
+4, multiscale, 40800, 500, 0.004611102338547574Jy/beam, 0.0011527755846368936Jy/beam, 268.9226496566924Jy*chan, 0.06987228818272109
+5, multiscale, 81600, 600, 0.004569910757682888Jy/beam, 0.001142477689420722Jy/beam, 269.53934759515835Jy*chan, 0.0022932168013859748
